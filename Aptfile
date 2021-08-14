@@ -4,6 +4,7 @@ command-not-found
 python3-cupshelpers
 language-selector-common
 python3-psycopg2
+python3-apsw 
 python-apt
 python3-rosdep
 python3-rosdistro

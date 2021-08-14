@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-apsw = "==3.8.2.post1"
 asgiref = "==3.2.10"
 attrs = "==19.3.0"
 autobahn = "==17.10.1"
