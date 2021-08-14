@@ -10,6 +10,7 @@ python3-lz4
 python3-mpi4py
 python-dbus
 python3-defer 
+python3-catkin-pkg
 python3-psycopg2
 python3-apsw 
 python3-apt
@@ -28,3 +29,5 @@ python3-cups
 python-gobject
 python-debian
 python3-snappy
+python3-sip
+python3-cupshelpers
