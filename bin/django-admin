@@ -1,4 +1,4 @@
-#!/home/sura/Documents/fresh_start/djangoenv/bin/python
+#!/home/sura/Documents/fresh_start/djangoenv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

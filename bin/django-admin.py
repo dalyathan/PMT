@@ -1,4 +1,4 @@
-#!/home/sura/Documents/fresh_start/djangoenv/bin/python
+#!/home/sura/Documents/fresh_start/djangoenv/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
