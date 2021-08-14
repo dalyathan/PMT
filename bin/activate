@@ -37,8 +37,12 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+
 VIRTUAL_ENV="/home/sura/Documents/fresh_start/djangoenv"
 export VIRTUAL_ENV
+
+PYTHONPATH="/home/sura/Documents/fresh_start/djangoenv/lib/python3.8/site-packages"
+export PYTHONPATH
 
 _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/bin:$PATH"
