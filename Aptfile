@@ -1,0 +1,17 @@
+apturl
+libbrlapi-dev
+command-not-found
+python3-cupshelpers
+language-selector-common
+python3-psycopg2
+python-apt
+python3-rosdep
+python3-rosdistro
+python3-rospkg
+ubuntu-advantage-tools
+ubuntu-drivers-common
+ufw
+unattended-upgrades 
+usb-creator-common
+python3-xkit 
+python3-venv  
