@@ -1,4 +1,4 @@
-release: python manage.py makemigrations --noinput
-release: python manage.py collectstatic --noinput
-release: python manage.py migrate --noinput
+release: python3 manage.py makemigrations --noinput
+release: python3 manage.py collectstatic --noinput
+release: python3 manage.py migrate --noinput
 web: gunicorn backtools.wsgi --log-file -
