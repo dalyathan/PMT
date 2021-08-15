@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'projmangtool',
     'rest_framework',
-    #'authemail',
+    'authemail',
     'knox',
     #'jwt_devices',
 ]

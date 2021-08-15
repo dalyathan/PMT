@@ -36,3 +36,4 @@ sqlparse==0.4.1
 urllib3==1.26.6
 validators==0.18.2
 whitenoise==5.3.0
+./django-rest-authemail
