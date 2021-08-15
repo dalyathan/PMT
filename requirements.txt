@@ -9,6 +9,7 @@ cryptography==3.4.7
 decorator==5.0.9
 dj-database-url==0.5.0
 Django==3.1
+django-environ==0.4.5
 django-filter==2.4.0
 django-heroku==0.3.1
 django-rest-authemail==2.0.6
