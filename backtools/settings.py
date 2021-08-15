@@ -45,7 +45,7 @@ STATICFILES_DIRS = (
 SECRET_KEY = 'django-insecure-j08h-4fjkwrd6y5t&d!ti4adzw&5w(jhxks%vv48^w4%3v_^hj'#os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
