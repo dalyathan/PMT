@@ -177,6 +177,8 @@ pyjwt = "==2.1.0"
 s3transfer = "==0.5.0"
 shortuuid = "==1.0.1"
 validators = "==0.18.2"
+./django-rest-authemail
+
 
 [dev-packages]
 
