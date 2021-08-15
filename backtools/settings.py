@@ -20,7 +20,7 @@ EMAIL_BCC = os.environ.get('AUTHEMAIL_DEFAULT_EMAIL_BCC') or 'suraMelese@gmail.c
 
 EMAIL_HOST = os.environ.get('AUTHEMAIL_EMAIL_HOST') or 'smtp.sendgrid.net'
 EMAIL_PORT = os.environ.get('AUTHEMAIL_EMAIL_PORT') or 587
-EMAIL_HOST_USER = os.environ.get('AUTHEMAIL_EMAIL_HOST_USER') or 'projmangtool'
+EMAIL_HOST_USER = os.environ.get('AUTHEMAIL_EMAIL_HOST_USER') or 'apikey'
 EMAIL_HOST_PASSWORD = os.environ.get('AUTHEMAIL_EMAIL_HOST_PASSWORD') or "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"
 
 EMAIL_USE_TLS = True
