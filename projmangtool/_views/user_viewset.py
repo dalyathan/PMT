@@ -12,7 +12,6 @@ class RegisteredUserViewSet(viewsets.ModelViewSet):
     @action(methods=['get'],detail= False)
     def getmyprojs(self, request):
         projs= models.Role.objects.filter(user= request.user)
-        print(projs)
         return Response(serializers.
             RoleSerializer( context={
                 'request': request

@@ -14,19 +14,19 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 class RegisteredUserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= models.RegisteredUser
-        fields= ['first_name','last_name','email','password','occupation']
+        fields= ['id','first_name','last_name','email','password','occupation']
 
 class ProjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= models.Project
-        fields= ['name','sdm']
+        fields= ['id','name','sdm']
         
 class TaskSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= models.Task
-        fields= ['url','project','dev','instruction','status','due']
+        fields= ['id','url','project','dev','instruction','status','due']
 
 class RoleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= models.Role
-        fields= ['user','role','project']
+        fields= ['id','user','role','project']
