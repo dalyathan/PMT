@@ -18,13 +18,13 @@ env = environ.Env()
 environ.Env.read_env()
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_FROM = os.environ.get('AUTHEMAIL_DEFAULT_EMAIL_FROM') or 'suramelese@gmail.com'
-EMAIL_BCC = os.environ.get('AUTHEMAIL_DEFAULT_EMAIL_BCC') or 'suraMelese@gmail.com'
+EMAIL_FROM = 'suramelese@gmail.com'
+EMAIL_BCC = 'suraMelese@gmail.com'
 
-EMAIL_HOST = os.environ.get('AUTHEMAIL_EMAIL_HOST') or 'smtp.sendgrid.net'
-EMAIL_PORT = os.environ.get('AUTHEMAIL_EMAIL_PORT') or 587
-EMAIL_HOST_USER = os.environ.get('AUTHEMAIL_EMAIL_HOST_USER') or 'apikey'
-EMAIL_HOST_PASSWORD = os.environ.get('AUTHEMAIL_EMAIL_HOST_PASSWORD') or "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"
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = env('SEND_GRID_KEY')
 
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
