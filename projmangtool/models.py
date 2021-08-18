@@ -6,10 +6,6 @@ from authemail.models import EmailUserManager, EmailAbstractUser
 # Create your models here.
 class CustomAccountManager(EmailUserManager):
     def create_user(self, **other_fields):
-        '''if not email:
-            raise ValueError(_('Missing email'))
-        email= self.normalize_email(email)
-        user.set_password(password)'''
         user= self.model(**other_fields)
         user.save()
         return user
@@ -35,14 +31,14 @@ class Project(models.Model):
         default= DevelopmentModels.INCREMENTAL,
     )
     name= models.CharField(max_length= 200, blank= True)
-    manager= models.ForeignKey(RegisteredUser, on_delete= models.CASCADE)
+    manager= models.ForeignKey(RegisteredUser, on_delete= models.CASCADE, related_name='my_projs')
     created= models.DateField(_("Date"), default=datetime.date.today)
     #the methods will be handled in views class bacause they are api end point
     
 class Task(models.Model):
     url= models.CharField(max_length=200)
     project= models.ForeignKey(Project, on_delete= models.CASCADE, related_name='tasks')
-    dev= models.ForeignKey(RegisteredUser, on_delete= models.CASCADE)
+    dev= models.ForeignKey(RegisteredUser, on_delete= models.CASCADE, related_name='my_tasks')
     instruction= models.CharField(max_length=500)
     class TaskStatus(models.TextChoices):
         COMPLETED= 'CMP', _('COMPLETED')
@@ -59,7 +55,7 @@ class Task(models.Model):
     assigned= models.DateField(_("Date"), default=datetime.date.today)
 
 class Role(models.Model):
-    user= models.ForeignKey(RegisteredUser, on_delete= models.CASCADE)
+    user= models.ForeignKey(RegisteredUser, on_delete= models.CASCADE, related_name='my_roles')
     class UserRole(models.TextChoices):
         DEVELOPER= 'DEV', _('DEVELOPER')
         MANAGER= 'MGR', _('MANAGER')
@@ -68,6 +64,6 @@ class Role(models.Model):
         choices= UserRole.choices,
         default= UserRole.NONE,
     )
-    project= models.ForeignKey(Project, on_delete= models.CASCADE, related_name='projs')
+    project= models.ForeignKey(Project, on_delete= models.CASCADE, related_name='roles')
 
 
