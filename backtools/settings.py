@@ -115,8 +115,8 @@ DATABASES = {
         'ENGINE': env('DB_ENGINE'),
         'NAME': env('DB_NAME'),
         'USER': env('DB_USER'),
-        'PASSWORD': env('lekehail'),
-        'HOST': env('localhost'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
     }
 }
 
