@@ -112,11 +112,11 @@ WSGI_APPLICATION = 'backtools.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'sura',
-        'PASSWORD': 'lekehail',
-        'HOST': 'localhost'
+        'ENGINE': env('DB_ENGINE'),
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('lekehail'),
+        'HOST': env('localhost'),
     }
 }
 
