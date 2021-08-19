@@ -17,10 +17,17 @@ class TaskViewSet(viewsets.ModelViewSet):
         task_data= request.data
         if self.isGitRepo(task_data['url']):
             return Response("The repo provided doesn't exist", status.HTTP_400_BAD_REQUEST)
+        try:
+            project= models.Project.objects.get(id=int(task_data['project']))
+            developer= models.Project.objects.get(id=int(task_data['project']))
+        except models.Project.DoesNotExist:
+            return Response('There is no such project', status.HTTP_400_BAD_REQUEST)
+        except models.Project.DoesNotExist:
+            return Response('There is no such developer', status.HTTP_400_BAD_REQUEST)
         new_task= models.Task.objects.create(
             url= task_data['url'], 
-            project= models.Project.objects.get(id=int(task_data['project'])),
-            dev= models.RegisteredUser.objects.get(id=int(task_data['dev'])),
+            project= project,
+            dev= developer,
             instruction= task_data['instruction'],
             due= datetime.date(int(task_data['year']), int(task_data['month']), int(task_data['day'])))
         new_task.save()

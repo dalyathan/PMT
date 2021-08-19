@@ -70,10 +70,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'authemail',
     'knox',
+    'corsheaders'
     #'jwt_devices',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -180,4 +182,5 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = "projmangtool.RegisteredUser" 
 django_heroku.settings(locals())
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+CORS_ORIGIN_ALLOW_ALL=True
 
